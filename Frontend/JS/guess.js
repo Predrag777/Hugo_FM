@@ -6,7 +6,6 @@ function humanSelect(pcNums) {
     let mySelectedCells = [];
     let points = 0;
     
-    baner.innerHTML = "Nadji orah";
 
     return new Promise(resolve => {
         cells.forEach(cell => {
@@ -52,6 +51,7 @@ function pcTurn(humanNumbers) {
     var positions = [1, 2, 3, 4, 5, 6, 7, 8, 9];
     var points = 0;  
     var pcSelectedCells = [];
+   
     const cells = document.querySelectorAll('#table1 .cells');
     const pcInterval = setInterval(() => {
         if (counter >= 3) {

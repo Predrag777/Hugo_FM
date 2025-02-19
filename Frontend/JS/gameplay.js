@@ -1,8 +1,8 @@
 var humanPoints = 0;
 var pcPoints = 0;
-var laps = 1;
-
+var laps = 3;
 async function oneLap() {
+    baner.innerHTML = "Select three <br> numbers";  
     var results = await humanTurn();
     var myNums = results[0]; 
     var pcNums = results[1]; 
@@ -10,11 +10,18 @@ async function oneLap() {
     console.log("My Numbers: ", myNums);
     console.log("PC Numbers: ", pcNums);
 
-    pcPoints += await pcTurn(myNums); 
+    baner.innerHTML = "PC is choosing...";
+    pcPoints += await pcTurn(myNums);  
+    baner.innerHTML = "Find the acorns!";
+    humanPoints += await humanSelect(pcNums);  
 
-    humanPoints += await humanSelect(pcNums); 
-
+    if (laps > 1) {
+        baner.innerHTML = "New round starting...";
+        await new Promise(resolve => setTimeout(resolve, 1000));  
+    }
 }
+
+
 
 async function startGame() {
     for (let i = 0; i < laps; i++) {  
@@ -25,8 +32,7 @@ async function startGame() {
     console.log("Human Points:", humanPoints);
     console.log("PC Points:", pcPoints);
 
-    // Dodatni delay da budemo sigurni da su animacije gotove
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => setTimeout(resolve, 2000));//Delay to ensure animations finished
 
     window.location.href = "Frontend/pages/game_over.html";
 }

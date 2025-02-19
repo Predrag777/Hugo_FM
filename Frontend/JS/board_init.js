@@ -5,8 +5,6 @@ async function humanTurn() {
         let mySelectedCells = [];
         var myNums = [];
         let pcNums = [];  
-
-        baner.innerHTML = "Select three <br> numbers"; 
         
         cells.forEach(cell => {
             cell.addEventListener('click', () => {
