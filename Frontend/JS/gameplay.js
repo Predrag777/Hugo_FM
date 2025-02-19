@@ -5,7 +5,7 @@ var laps = 3;
 
 const coins=document.getElementById("coin_text")
 async function oneLap() {
-    baner.innerHTML = "Select three <br> numbers";  
+    baner.innerHTML = "Hide your three<br>acorns";  
     var results = await humanInitialize();
     var myNums = results[0]; 
     var pcNums = results[1]; 
