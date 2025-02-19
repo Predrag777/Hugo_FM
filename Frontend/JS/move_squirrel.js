@@ -1,4 +1,8 @@
 var c = 0;
+var c_picking=0;
+
+var c_picking2=0;
+
 var animArr = [
     "agentSquirrel/squirrel1.png", 
     "agentSquirrel/squirrel2.png", 
@@ -8,6 +12,18 @@ var animArr = [
     "agentSquirrel/squirrel6.png", 
     "agentSquirrel/squirrel7.png"
 ];
+
+var animArrPut = [
+    "agentSquirrel/squirrelAcorn4.png", 
+    "agentSquirrel/squirrelAcorn5.png", 
+    "agentSquirrel/squirrelAcorn6.png",
+];
+
+var animArrPick=[
+    "agentSquirrel/squirrelAcorn4.png", 
+    "agentSquirrel/squirrelAcorn5.png", 
+    "agentSquirrel/squirrelAcorn6.png",
+]
 
 document.addEventListener("DOMContentLoaded", function () {
     let squirrel = document.getElementById("mySquirrel");
@@ -58,9 +74,10 @@ function moveSquirrel(squirrel, targetX, targetY) {
         if (progress < 1) {
             requestAnimationFrame(animateSquirrel);
         } else {
-            squirrel.style.backgroundImage = `url(${animArr[0]})`; 
+            putAcorn(squirrel, animArrPick);
         }
     }
+
     let animInterval = setInterval(() => {
         squirrel.style.backgroundImage = `url(${animArr[c]})`;
         c = (c + 1) % animArr.length;
@@ -71,4 +88,34 @@ function moveSquirrel(squirrel, targetX, targetY) {
     setTimeout(() => {
         clearInterval(animInterval);
     }, duration);
+}
+
+function putAcorn(squirrel, arr) {
+    c_picking = 0;
+
+    const pickingInterval = setInterval(() => {
+        if (c_picking < animArrPut.length) {
+            squirrel.style.backgroundImage = `url(${arr[c_picking]})`;
+            c_picking++;
+        } else {
+
+            squirrel.style.backgroundImage="url('agentSquirrel/squirrel1.png')"
+            clearInterval(pickingInterval);
+        }
+    }, 300);
+}
+
+function pickAcorn(squirrel){
+    c_picking2=0
+
+    const pickingInterval = setInterval(() => {
+        if (c_picking < animArrPut.length) {
+            squirrel.style.backgroundImage = `url(${animArrPut[c_picking]})`;
+            c_picking++;
+        } else {
+
+            squirrel.style.backgroundImage="url('agentSquirrel/squirrel1.png')"
+            clearInterval(pickingInterval);
+        }
+    }, 300);
 }
