@@ -3,13 +3,13 @@ async function humanTurn() {
         const cells = document.querySelectorAll('#table1 .cells');
         let counter = 0;
         let mySelectedCells = [];
-        var myNums=[];
-        let pcNums = [];
+        var myNums = [];
+        let pcNums = [];  
+
+        baner.innerHTML = "Select three <br> numbers"; 
         
         cells.forEach(cell => {
-            
             cell.addEventListener('click', () => {
-                
                 if (counter < 3 && !mySelectedCells.includes(cell)) {
                     mySelectedCells.push(cell);
                     myNums.push(cell.textContent);
@@ -30,7 +30,7 @@ async function humanTurn() {
                                 cell.style.backgroundColor = "green";
                             });
 
-                            pcNums = pcInitialize();
+                            pcNums = pcInitialize(); 
                             resolve([mySelectedCells, pcNums]); 
                         }, 1000);
                     }
@@ -50,6 +50,7 @@ function pcInitialize() {
         else
             i -= 1;
     }
-    console.log(pcNumbers);
+
+    console.log("PC Numbers: ", pcNumbers);
     return pcNumbers;
 }
