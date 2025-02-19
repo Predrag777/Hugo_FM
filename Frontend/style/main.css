@@ -1,0 +1,250 @@
+@font-face {
+    font-family: 'myFont';
+    src: url('/home/predrag/Desktop/Hugo_FM/Frontend/fonts/1. OTF/Chalk Board.otf') format('opentype'),
+         url('/home/predrag/Desktop/Hugo_FM/Frontend/fonts/2. TTF/Chalk Board.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    overflow-x: hidden;
+}
+
+#header {
+    width: 100%;
+    height: 20%;
+    background-image: url("../../PNG/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+#main{
+    width: 100%;
+    height: 65%;
+    background-image: URL('../../PNG/mainBackground.png');
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer{
+    width: 100%;
+    height: 15%;
+    background-color: green;
+    position: relative;
+}
+
+
+
+/*ASSETS*/
+
+.elements{
+
+}
+
+#diamond1{
+    width: 10%;
+    height: 50%;
+    margin-right: 45%;
+}
+
+#title{
+    width: 25%;
+    height: 20%;
+    position: fixed;
+    display: block;
+}
+
+#menu{
+    width: 8%;
+    height: 10%;
+    position:absolute;
+    left: 0;
+}
+
+#shield{
+    width: 8%;
+    height: 10%;
+    position: absolute;
+    right: 0;
+}
+
+
+
+/*TABLES*/
+
+
+
+.table{
+    width: 30%;
+    height:100%;
+}
+
+#table1{
+    position: absolute;
+    left: 10%;
+    height: 40%;
+    background-color: white;
+}
+
+#table2{
+    position: absolute;
+    height: 40%;
+    right: 10%;
+    background-color: white;
+}
+
+
+
+#baner {
+    top: 22%;
+    margin-left: 1%;
+    position: absolute;
+    width: 15%;
+    height: 14%;
+    display: block;
+}
+
+#VS {
+    position: relative;
+    display: block;
+    width: 300px;
+}
+
+
+/*Footer*/
+#footer {
+    position: relative;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-image: url('../../PNG/wooden.png');
+    background-position: 60% center;
+}
+  
+
+#player1 {
+    position: absolute;
+    left: 10%;
+    height: 80%;
+    width: 20%;
+}
+
+#player2 {
+    position: absolute;
+    right: 10%;
+    height: 80%;
+    width: 20%;
+}
+#squirel{
+    position: absolute;
+    margin-bottom: 90px;
+    height: 160%;
+    width: 13%;
+}
+
+  
+#logo{
+    height: 90%;
+    width: 30%;
+}
+
+
+
+#aux_coin{
+    display: flex;
+    align-items: center;
+    width: 10%; 
+}
+
+#slika{
+    border-left: none;
+}
+
+
+#coin_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #2147c5;
+    color: white;
+    font-family: "myFont", cursive, sans-serif;
+    font-weight: 900;
+    height: 50px;
+    width: 100%;
+    font-size: 32px;
+    letter-spacing: 3px;
+    border: 3px solid black;
+    border-right: none;
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    position: relative; 
+}
+
+#coin_text::before,
+#coin_text::after {
+    content: '';
+    position: absolute;
+    top: -3; 
+    bottom: 0; 
+    left: 40%; 
+    width: 50px; 
+    height: 3px; 
+    background-color: black; 
+}
+
+#coin_text::after {
+    top: auto;
+    bottom: -3;
+}
+
+
+
+.button{
+    display: flex;
+    border-radius: 25px;
+    background-color: #3D1C02;;
+    font-family: "myFont", cursive, sans-serif;
+    font-weight: 900;
+    color: white;
+    font-size: 50px;;
+    border: 20px solid rgb(247, 158, 57);
+    width: 20%;
+    height: 10%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+
+    margin-top: 20%;
+    margin-bottom: 5%;
+    letter-spacing: 5px;
+    word-spacing: 5px; 
+    box-shadow: 15px 15px 30px rgba(0, 0, 3, 0.5);
+}
+
+
+#player1, #player2{
+    
+    font-size: 22px;
+    font-weight: 900;
+    margin-top: 0;
+    border: 10px solid rgb(247, 158, 57);
+    margin-bottom: 0;
+    width: 10%;
+    height: 50%;
+    
+}

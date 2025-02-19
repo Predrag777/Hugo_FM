@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'myFont';
+    src: url('/home/predrag/Desktop/Hugo_FM/Frontend/fonts/1. OTF/Chalk Board.otf') format('opentype'),
+         url('/home/predrag/Desktop/Hugo_FM/Frontend/fonts/2. TTF/Chalk Board.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#main{
+    align-items: center;
+}
+
+
+
+
+
+
+#main{
+    height: 65%;
+}
+
+#footer{
+    height: 15%;
+    background-image: URL('../../PNG/wooden.png');
+}
+
+
+.table{
+    height: 10%;
+    width: 30%;
+}
+
+#playAgain{
+    position: absolute;
+    left: 20%;
+    margin-top: 20%;
+    margin-bottom: 5%;
+    cursor: pointer;
+}
+
+#switchAgain{
+    position: absolute;
+    right: 20%;
+    cursor: pointer;
+}
+
+#gameOver{
+    color: yellowgreen;
+    font-size: 150px;;
+    width: 60%;
+    letter-spacing: 22px; 
+    word-spacing: 15px; 
+    height: 40%;
+    margin-bottom: 30%;
+}
