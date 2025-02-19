@@ -5,15 +5,17 @@ async function humanTurn() {
         let mySelectedCells = [];
         var myNums=[];
         let pcNums = [];
-
+        
         cells.forEach(cell => {
+            
             cell.addEventListener('click', () => {
+                
                 if (counter < 3 && !mySelectedCells.includes(cell)) {
                     mySelectedCells.push(cell);
                     myNums.push(cell.textContent);
                     counter++;
 
-                    cell.style.backgroundImage = "url('/home/predrag/Desktop/Hugo_FM/PNG/Asset 3-8.png')";
+                    cell.style.backgroundImage = "url('PNG/Asset 3-8.png')";
                     cell.style.backgroundSize = "70% 70%";
                     cell.style.backgroundRepeat = "no-repeat";
                     cell.style.backgroundPosition = "center";

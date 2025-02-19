@@ -248,3 +248,25 @@ body{
     height: 50%;
     
 }
+
+
+
+
+#baner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 4px;
+    font-family: "myFont", cursive, sans-serif;
+    width: 10%;
+    height: 10%;
+    border-radius: 100px;
+    border: 5px solid rgb(255, 255, 255);
+    background-color: rgb(243, 97, 39);
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+
+    background-position: center;
+    background-repeat: no-repeat;
+}
