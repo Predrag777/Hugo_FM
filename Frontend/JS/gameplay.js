@@ -1,19 +1,23 @@
 var humanPoints = 0;
 var pcPoints = 0;
 var laps = 3;
+
+
+const coins=document.getElementById("coin_text")
 async function oneLap() {
     baner.innerHTML = "Select three <br> numbers";  
-    var results = await humanTurn();
+    var results = await humanInitialize();
     var myNums = results[0]; 
     var pcNums = results[1]; 
 
-    console.log("My Numbers: ", myNums);
-    console.log("PC Numbers: ", pcNums);
 
     baner.innerHTML = "PC is choosing...";
-    pcPoints += await pcTurn(myNums);  
+    pcPoints += await pcTurn(myNums.map(cell => Number(cell.textContent)));  
+
     baner.innerHTML = "Find the acorns!";
     humanPoints += await humanSelect(pcNums);  
+    console.log(humanPoints+"   "+pcPoints)
+    coins.innerHTML=Number(coins.textContent)+(humanPoints-pcPoints);
 
     if (laps > 1) {
         baner.innerHTML = "New round starting...";
