@@ -1,7 +1,28 @@
-const cells = document.querySelectorAll('#table1 .cells');
+// gameplay.js
+async function startGame() {
+    var results = await humanTurn();  // Čekamo da se završi humanTurn
+    var myNums = results[0];
+    var pcNums = results[1];
+
+    console.log("MyNums:", myNums);
+    console.log("PC nums:", pcNums);
+
+
+    
+}
+
+startGame(); // Pozivamo funkciju
+
+
+//pcInitialize();
+
+/*const cells = document.querySelectorAll('#table1 .cells');
 let logTurn = true;
 let counter = 0;
 let mySelectedCells = [];
+
+
+
 
 function humanTurn() {
     cells.forEach(cell => {
@@ -40,9 +61,26 @@ function humanTurn() {
 }
 
 
+const positions = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+
+function pcInitialize(){
+    var pcNumbers=[]
+    for(let i=0;i<3;i++){
+        let randomPosition = positions[Math.floor(Math.random() * positions.length)];
+        if(!pcNumbers.includes(randomPosition))
+            pcNumbers.push(randomPosition);
+        else
+            i-=1
+    }
+    console.log(pcNumbers);
+    return pcNumbers;
+}
+
+
 let pcSelectedCells=[];
 function pcTurn() {
-    const positions = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    
     const cells = document.querySelectorAll('#table2 .cells');
     console.log("PC's turn");
 
@@ -84,6 +122,9 @@ function pcTurn() {
         }
     }, 1000); 
 }
+
+pcInitialize();
+
 if (logTurn) {
     humanTurn();
-}
+}*/
