@@ -1,6 +1,17 @@
-function pcTurn() {
-    
-    const cells = document.querySelectorAll('#table2 .cells');
+function humanSelect(){
+
+}
+
+
+
+//"rgb(177, 3, 3)";
+
+
+function pcTurn(humanNumbers) {
+    var counter=0;
+    var positions=[1,2,3,4,5,6,7,8,9];
+    var pcSelectedCells=[];
+    const cells = document.querySelectorAll('#table1 .cells');
     console.log("PC's turn");
 
     const pcInterval = setInterval(() => {
@@ -11,7 +22,7 @@ function pcTurn() {
                     cell.style.backgroundImage = "none";
                     cell.style.color = "white";
                     cell.textContent = cell.dataset.originalText;
-                    cell.style.backgroundColor="rgb(177, 3, 3)";
+                    cell.style.backgroundColor="green";
                 });
                 logTurn = true;
                 counter = 0;
@@ -20,14 +31,19 @@ function pcTurn() {
             }, 1000); 
             return;
         }
-
-        let randomPosition = positions[Math.floor(Math.random() * positions.length)];
+        let num=Math.floor(Math.random() * positions.length)
+        let randomPosition = positions[num];
         let selectedCell = cells[randomPosition - 1]; 
 
         if (selectedCell && !pcSelectedCells.includes(selectedCell)) {
             selectedCell.dataset.originalText = selectedCell.textContent; 
             pcSelectedCells.push(selectedCell); 
-            selectedCell.style.backgroundImage = "url('/home/predrag/Desktop/Hugo_FM/PNG/Asset 2-8.png')";
+            console.log("SS "+selectedCell);
+            if(humanNumbers.includes(selectedCell))
+                selectedCell.style.backgroundImage = "url('/home/predrag/Desktop/Hugo_FM/PNG/Asset 2-8.png')";
+            else{
+                selectedCell.style.backgroundImage = "url('/home/predrag/Desktop/Hugo_FM/PNG/incorrect.png')";
+            }
             selectedCell.style.backgroundSize = "70% 70%";
             selectedCell.style.backgroundRepeat = "no-repeat";
             selectedCell.style.backgroundPosition = "center";
@@ -37,7 +53,6 @@ function pcTurn() {
 
             counter++; 
 
-            console.log(randomPosition + "   " + counter);
         }
     }, 1000); 
 }

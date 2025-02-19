@@ -8,7 +8,7 @@ async function startGame() {
     console.log("PC nums:", pcNums);
 
 
-    
+    pcTurn(myNums);
 }
 
 startGame(); // Pozivamo funkciju
