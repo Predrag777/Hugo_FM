@@ -1,6 +1,6 @@
 var baner=document.getElementById("baner");
 function humanSelect(pcNums) {
-    const cells = document.querySelectorAll('#table2 .cells');
+    const cells = document.querySelectorAll('#table2 .cells');//Id = table2 is PC's table.
     let counter = 0;
     let mySelectedCells = [];
     let points = 0;

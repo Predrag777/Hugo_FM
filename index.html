@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>MINI GAMES</title>
+    <!--CSS files-->
     <link rel="stylesheet" href="Frontend/style/main.css">
     <link rel="stylesheet" href="Frontend/style/tables.css">
     <link rel="stylesheet" href="Frontend/style/animations.css">
@@ -9,13 +10,13 @@
 <body>
 
 
-<div id="header">
+<div id="header"><!--Top part of the page-->
     <img class="elements" id="menu" alt="menu img" src="PNG/menu.png"></img>
     <img class="elements" id="diamond1" alt="Diamond image" src="PNG/diamond.png"></img>    
     
     <img id="title" alt="Title" src="PNG/title.png"></img>
 
-    <div class="elements" id="aux_coin">
+    <div class="elements" id="aux_coin"><!--Save the score-->
         <span class="text" id="coin_text">0</span>
         <img class="coin" id="slika" alt="coin" src="PNG/coin.png" alt="Image">
     </div>
@@ -24,9 +25,9 @@
 
 
 
-<div id="main">
-    <div id="mySquirrel"></div>
-    <div class="table" id="table1">
+<div id="main"><!--Main part of the game-->
+    <div id="mySquirrel"></div><!--Squirrel agrent-->
+    <div class="table" id="table1"><!--Human player tabel-->
         <div class="rows" id="row1-1">
             <span class="cells" id="1">1</span>
             <span class="cells" id="2">2</span>
@@ -47,13 +48,13 @@
 
 
 
-
+    <!--Baner with explaination which side play-->
     <div id="aux">
         <div id="baner">Baner</div>
         <img id="VS" src="PNG/VS.png"></img>
     </div>
 
-
+    <!--PC's table-->
     <div class="table" id="table2">
         <div class="rows" id="row1-1">
             <span class="cells" id="1">1</span>
@@ -85,8 +86,8 @@
 
 
 </body>
-<script src="Frontend/JS/guess.js"></script>
-<script src="Frontend/JS/board_init.js"></script>
-<script src="Frontend/JS/gameplay.js"></script>
-<script src="Frontend/JS/move_squirrel.js"></script>
+<script src="Frontend/JS/guess.js"></script><!--Script for guessing-->
+<script src="Frontend/JS/board_init.js"></script><!--Board initialization where PC and Human initialize their boards-->
+<script src="Frontend/JS/gameplay.js"></script><!--Gameplay logic-->
+<script src="Frontend/JS/move_squirrel.js"></script><!--Movement for the squirrel-->
 </html>
